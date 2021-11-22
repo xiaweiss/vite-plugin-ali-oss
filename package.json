@@ -8,6 +8,10 @@
 	"license": "MIT",
 	"type": "module",
 	"main": "index.js",
+	"keywords": [
+		"vite-plugin",
+		"ali-oss"
+	],
 	"peerDependencies": {
 		"vite": "^2.6.14"
 	},
