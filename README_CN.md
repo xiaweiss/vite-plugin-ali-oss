@@ -1,7 +1,7 @@
 vite-plugin-ali-oss
 =======
 
-Vite 阿里云 OSS 资源上传插件
+将项目中打包后生产文件上传到 Ali OSS，除了 html 以外
 
 # 功能特性
 
@@ -34,6 +34,7 @@ npm i -D vite-plugin-ali-oss
 # 基本使用
 
 1. 在 vite.config.js 中注册本插件
+2. 设置 base 开发或生产环境服务的公共基础 ***URL*** 路径
 
 ```javascript
 import { defineConfig } from 'vite'
@@ -49,7 +50,7 @@ const options = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '<Public Path>', // eg: 'https://xiawei.cc/',
+  base: 'https://foo.com/', // 必须是 URL
   plugins: [vue(), vitePluginAliOss(options)]
 })
 ```

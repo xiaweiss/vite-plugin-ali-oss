@@ -2,7 +2,7 @@
 	"name": "vite-plugin-ali-oss",
 	"version": "0.0.6",
 	"author": "xiaweiss",
-	"description": "Aliyun OSS(open storage service) JavaScript SDK for the vite project",
+	"description": "Upload the production files bundled in the project to Ali OSS, except for html",
 	"homepage": "https://github.com/xiaweiss/vite-plugin-ali-oss",
 	"repository": "https://github.com/xiaweiss/vite-plugin-ali-oss",
 	"license": "MIT",
@@ -10,7 +10,8 @@
 	"main": "index.js",
 	"keywords": [
 		"vite-plugin",
-		"ali-oss"
+		"ali-oss",
+		"aliyun"
 	],
 	"dependencies": {
 		"ali-oss": "^6.16.0",

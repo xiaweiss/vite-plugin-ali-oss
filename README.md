@@ -1,7 +1,7 @@
 vite-plugin-ali-oss
 =======
 
-Aliyun OSS(open storage service) JavaScript SDK for the vite project
+Upload the production files bundled in the project to Ali OSS, except for html
 
 [中文文档](https://github.com/xiaweiss/vite-plugin-ali-oss/blob/master/README_CN.md)
 
@@ -36,6 +36,7 @@ npm i -D vite-plugin-ali-oss
 # Basic usage
 
 1. Register the plugin in `vite.config.js`
+2. Set base public ***URL*** path when served in development or production.
 
 ```javascript
 import { defineConfig } from 'vite'
@@ -51,7 +52,7 @@ const options = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '<Public Path>', // eg: 'https://xiawei.cc/',
+  base: 'https://foo.com/', // must be URL
   plugins: [vue(), vitePluginAliOss(options)]
 })
 ```
@@ -77,8 +78,4 @@ The plugin will upload files of outDir path after bundle.
 | headers         | Request headers setting, more information: https://www.alibabacloud.com/help/en/doc-detail/31978.html | object | {} |
 | test            | Only test path, no files upload                                           | boolean | false         |
 | ...             | Other init oss options, more information: https://www.alibabacloud.com/help/en/doc-detail/64097.html | any | |
-
-
-
-
 

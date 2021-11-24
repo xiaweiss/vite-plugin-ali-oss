@@ -1,5 +1,8 @@
 Change log
 =======
+v0.0.7
+fix: base path, update readme, add github workflow
+
 v0.0.6
 fix: pnpm import 'colors/safe' error
 

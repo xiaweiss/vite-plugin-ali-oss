@@ -2,6 +2,7 @@ import colors from 'colors'
 import glob from 'glob'
 import path from 'path'
 import OSS from 'ali-oss'
+import {URL} from 'url'
 
 import { normalizePath } from 'vite'
 
@@ -19,6 +20,7 @@ export default function vitePluginAliOss (options) {
     },
     async closeBundle () {
       const outDirPath = path.resolve(normalizePath(buildConfig.outDir))
+      const {pathname: ossBasePath, origin: ossOrigin} = new URL(baseConfig)
 
       const createOssOption = Object.assign({}, options)
       delete createOssOption.overwrite
@@ -37,12 +39,16 @@ export default function vitePluginAliOss (options) {
       const startTime = new Date().getTime()
 
       for (const fileFullPath of files) {
-        const ossFilePath = fileFullPath.split(outDirPath)[1]
-        const filePath = `${buildConfig.outDir + ossFilePath}`
-        const completePath = baseConfig + ossFilePath.replace(/^\//, '')
+        const filePath = fileFullPath.split(outDirPath)[1] // eg: '/assets/vendor.bfb92b77.js'
+
+        const ossFilePath = ossBasePath.replace(/\/$/, '') + filePath // eg: '/base/assets/vendor.bfb92b77.js'
+
+        const completePath = ossOrigin + ossFilePath // eg: 'https://foo.com/base/assets/vendor.bfb92b77.js'
+
+        const output = `${buildConfig.outDir + filePath} => ${colors.green(completePath)}`
 
         if (options.test) {
-          console.log(`test upload path: ${filePath} => ${colors.green(completePath)}`)
+          console.log(`test upload path: ${output}`)
           continue
         }
 
@@ -54,12 +60,13 @@ export default function vitePluginAliOss (options) {
               headers: options.headers || {}
             }
           )
-          console.log(`upload complete: ${filePath} => ${colors.green(completePath)}`)
+          console.log(`upload complete: ${output}`)
 
         } else {
           try {
             await client.head(ossFilePath);
-            console.log(`${colors.grey('files exists')}: ${filePath} => ${colors.green(completePath)}`)
+            console.log(`${colors.grey('files exists')}: ${output}`)
+
           }  catch (error) {
             if (error.code === 'NoSuchKey') {
               await client.put(
@@ -69,7 +76,7 @@ export default function vitePluginAliOss (options) {
                   headers: Object.assign(options.headers || {}, { 'x-oss-forbid-overwrite': true })
                 }
               )
-              console.log(`upload complete: ${filePath} => ${colors.green(completePath)}`)
+              console.log(`upload complete: ${output}`)
             } else {
               throw new Error(error)
             }
@@ -78,6 +85,7 @@ export default function vitePluginAliOss (options) {
       }
 
       const duration = (new Date().getTime() - startTime) / 1000
+
       console.log('')
       console.log(`ali oss upload complete ^_^, cost ${duration.toFixed(2)}s`)
       console.log('')
