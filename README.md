@@ -11,6 +11,10 @@ Aliyun OSS(open storage service) JavaScript SDK for the vite project
 - Almost zero configuration, using vite outDir path, uploading to the same path of oss.
 > Upload all files except html files, because html files has no hash and is usually placed on the server.
 
+preview:
+
+![preview](https://raw.githubusercontent.com/xiaweiss/vite-plugin-ali-oss/master/example/preview.png)
+
 # Installation
 
 ```
@@ -70,7 +74,7 @@ The plugin will upload files of outDir path after bundle.
 | bucket          | ali cloud oss bucket                                                      | string  |               |
 | overwrite       | If the file already exists, whether to skip upload                        | boolean | false         |
 | ignore          | Ignore file rules. If you use empty string `''`, no files will be ignored | string  | `'**/*.html'` |
-| headers         | Request headers setting, more information: https://www.alibabacloud.com/help/en/doc-detail/31978.html ｜ object｜ {} ｜
+| headers         | Request headers setting, more information: https://www.alibabacloud.com/help/en/doc-detail/31978.html | object | {} |
 | test            | Only test path, no files upload                                           | boolean | false         |
 | ...             | Other init oss options, more information: https://www.alibabacloud.com/help/en/doc-detail/64097.html | any | |
 
