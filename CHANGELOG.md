@@ -1,5 +1,8 @@
 Change log
 =======
+v0.0.4
+add options, update readme
+
 v0.0.3
 add .npmignore
 
