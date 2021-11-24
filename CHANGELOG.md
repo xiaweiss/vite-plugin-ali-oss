@@ -1,5 +1,8 @@
 Change log
 =======
+v0.0.5
+fix: move devDependencies to dependencies
+
 v0.0.4
 add options, update readme
 
