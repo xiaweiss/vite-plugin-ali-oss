@@ -4,14 +4,14 @@ import vitePluginAliOss from './plugin.js'
 
 const options = {
   region: 'oss-cn-beijing',
-  accessKeyId: '<Your Access Key ID>',
-  accessKeySecret: '<Your Access Key Secret>',
-  bucket: '<Your Bucket>',
+  accessKeyId: 'LTAI5tAPUKvCQZBb326Eykhu',
+  accessKeySecret: 'xxxxxx',
+  bucket: 'xiaweiss',
   overwrite: false
 }
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '<Public Path>', // eg: 'https://xiawei.cc/',
+  base: 'https://foo.com/', // same with webpack public path
   plugins: [vue(), vitePluginAliOss(options)]
 })

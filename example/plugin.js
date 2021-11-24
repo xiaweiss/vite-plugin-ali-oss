@@ -27,8 +27,9 @@ export default function vitePluginAliOss (options) {
         bucket: options.bucket
       })
 
-      const files = await glob.sync(outDirPath + '/**/*', {nodir: true, dot: true, ignore: options.ignore || '**/*.html'})
+      const files = await glob.sync(outDirPath + '/**/*', {nodir: true, dot: true, ignore: options.ignore ? options.ignore : '**/*.html'})
 
+      console.log('ali oss upload start')
       const startTime = new Date().getTime()
 
       for (const fileFullPath of files) {
@@ -59,7 +60,7 @@ export default function vitePluginAliOss (options) {
                   headers: Object.assign(options.headers || {}, { 'x-oss-forbid-overwrite': true })
                 }
               )
-              console.log(colors.green(`upload complete: ${filePath} => ${colors.green(completePath)}`))
+              console.log(`upload complete: ${filePath} => ${colors.green(completePath)}`)
             } else {
               throw new Error(error)
             }
@@ -70,6 +71,7 @@ export default function vitePluginAliOss (options) {
       const duration = (new Date().getTime() - startTime) / 1000
       console.log('')
       console.log(`ali oss upload complete ^_^, cost ${duration.toFixed(2)}s`)
+      console.log('')
     }
   }
 }

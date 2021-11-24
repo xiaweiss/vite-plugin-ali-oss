@@ -3,6 +3,15 @@ vite-plugin-ali-oss
 
 Aliyun OSS(open storage service) JavaScript SDK for the vite project
 
+[中文文档](https://github.com/xiaweiss/vite-plugin-ali-oss/blob/master/README_CN.md)
+
+# Feature
+
+- Skip existing files by default (files will not be downloaded) to speed up upload.
+- Almost zero configuration, using vite outDir path, uploading to the same path of oss.
+> Upload all files except html files, because html files has no hash and is usually placed on the server.
+
+
 
 # Installation
 
@@ -24,7 +33,7 @@ npm i -D vite-plugin-ali-oss
 
 # Basic usage
 
-vite.config.js
+1. Register the plugin in `vite.config.js`
 
 ```javascript
 import { defineConfig } from 'vite'
@@ -45,10 +54,25 @@ export default defineConfig({
 })
 ```
 
+2. Build Production
+
 ```
 pnpm run build
 ```
 
-This plugin will upload files of outDir path after bundle.
+The plugin will upload files of outDir path after bundle.
+
+# options
+
+| options         | description                                                               | type    | default       |
+|-----------------|---------------------------------------------------------------------------|---------|---------------|
+| region          | ali cloud oss region                                                      | string  |               |
+| accessKeyId     | ali cloud oss accessKeyId                                                 | string  |               |
+| accessKeySecret | ali cloud oss accessKeySecret                                             | string  |               |
+| bucket          | ali cloud oss bucket                                                      | string  |               |
+| overwrite       | If the file already exists, whether to skip upload                        | boolean | false         |
+| ignore          | Ignore file rules. If you use empty string `''`, no files will be ignored | string  | `'**/*.html'` |
+
+
 
 
