@@ -19,5 +19,8 @@
 	},
 	"peerDependencies": {
 		"vite": "^2.6.14"
+	},
+	"publishConfig": {
+		"@xiaweiss:registry": "https://npm.pkg.github.com"
 	}
 }
