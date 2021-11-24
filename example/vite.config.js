@@ -5,9 +5,10 @@ import vitePluginAliOss from './plugin.js'
 const options = {
   region: 'oss-cn-beijing',
   accessKeyId: 'LTAI5tAPUKvCQZBb326Eykhu',
-  accessKeySecret: 'xxxxxx',
+  accessKeySecret: '',
   bucket: 'xiaweiss',
-  overwrite: false
+  overwrite: false,
+  // test: true
 }
 
 // https://vitejs.dev/config/

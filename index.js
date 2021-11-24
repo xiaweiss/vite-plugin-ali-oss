@@ -20,22 +20,31 @@ export default function vitePluginAliOss (options) {
     async closeBundle () {
       const outDirPath = path.resolve(normalizePath(buildConfig.outDir))
 
-      const client = new OSS({
-        region: options.region,
-        accessKeyId: options.accessKeyId,
-        accessKeySecret: options.accessKeySecret,
-        bucket: options.bucket
-      })
+      const createOssOption = Object.assign({}, options)
+      delete createOssOption.overwrite
+      delete createOssOption.ignore
+      delete createOssOption.headers
+      delete createOssOption.test
+
+      const client = new OSS(createOssOption)
 
       const files = await glob.sync(outDirPath + '/**/*', {nodir: true, dot: true, ignore: options.ignore ? options.ignore : '**/*.html'})
 
+      console.log('')
       console.log('ali oss upload start')
+      console.log('')
+
       const startTime = new Date().getTime()
 
       for (const fileFullPath of files) {
         const ossFilePath = fileFullPath.split(outDirPath)[1]
         const filePath = `${buildConfig.outDir + ossFilePath}`
         const completePath = baseConfig + ossFilePath.replace(/^\//, '')
+
+        if (options.test) {
+          console.log(`test upload path: ${filePath} => ${colors.green(completePath)}`)
+          continue
+        }
 
         if (options.overwrite) {
           await client.put(
