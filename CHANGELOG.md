@@ -1,5 +1,8 @@
 Change log
 =======
+v0.0.6
+fix: pnpm import 'colors/safe' error
+
 v0.0.5
 fix: move devDependencies to dependencies
 

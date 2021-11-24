@@ -1,4 +1,4 @@
-import colors from 'colors/safe'
+import colors from 'colors'
 import glob from 'glob'
 import path from 'path'
 import OSS from 'ali-oss'
