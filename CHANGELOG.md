@@ -1,5 +1,11 @@
 Change log
 =======
+v1.0.1
+fix: change ESmodule to CommonJS
+
+v1.0.0
+release
+
 v0.0.7
 fix: base path, update readme, add github workflow
 

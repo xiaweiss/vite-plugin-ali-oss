@@ -6,7 +6,6 @@
 	"homepage": "https://github.com/xiaweiss/vite-plugin-ali-oss",
 	"repository": "https://github.com/xiaweiss/vite-plugin-ali-oss",
 	"license": "MIT",
-	"type": "module",
 	"main": "index.js",
 	"keywords": [
 		"vite-plugin",

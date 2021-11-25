@@ -1,12 +1,12 @@
-import colors from 'colors'
-import glob from 'glob'
-import path from 'path'
-import OSS from 'ali-oss'
-import {URL} from 'url'
+const colors  = require('colors')
+const glob  = require('glob')
+const path = require('path')
+const OSS = require('ali-oss')
+const {URL} = require( 'url')
 
-import { normalizePath } from 'vite'
+const { normalizePath } = require('vite')
 
-export default function vitePluginAliOss (options) {
+module.exports = function vitePluginAliOss (options) {
   let baseConfig = '/'
   let buildConfig = ''
 

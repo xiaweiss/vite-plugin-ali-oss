@@ -55,7 +55,7 @@ export default defineConfig({
 })
 ```
 
-2. 打包发布生产代码
+3. 打包发布生产代码
 
 ```
 pnpm run build

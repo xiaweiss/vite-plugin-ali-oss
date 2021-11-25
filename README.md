@@ -57,7 +57,7 @@ export default defineConfig({
 })
 ```
 
-2. Build Production
+3. Build Production
 
 ```
 pnpm run build
