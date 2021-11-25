@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-ali-oss",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "xiaweiss",
 	"description": "Upload the production files bundled in the project to Ali OSS, except for html",
 	"homepage": "https://github.com/xiaweiss/vite-plugin-ali-oss",
