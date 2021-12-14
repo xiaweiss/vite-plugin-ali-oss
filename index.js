@@ -10,6 +10,10 @@ module.exports = function vitePluginAliOss (options) {
   let baseConfig = '/'
   let buildConfig = ''
 
+  if (options.enabled !== void 0 && !options.enabled) {
+    return
+  }
+
   return {
     name: 'vite-plugin-ali-oss',
     enforce: 'post',
@@ -27,6 +31,7 @@ module.exports = function vitePluginAliOss (options) {
       delete createOssOption.ignore
       delete createOssOption.headers
       delete createOssOption.test
+      delete createOssOption.enabled
 
       const client = new OSS(createOssOption)
 

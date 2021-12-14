@@ -74,6 +74,7 @@ pnpm run build
 | overwrite       | 如果文件已存在，是否覆盖                                    | boolean | false         |
 | ignore          | 文件忽略规则。如果你使用空字符串 `''`，将不会忽略任何文件 | boolean | `'**/*.html'` |
 | headers         | 请求头设置，详细信息请见 https://www.alibabacloud.com/help/zh/doc-detail/31978.html | object| {} |
-| test            | 仅测试路径，不会有文件上传                                  | boolean | false        |
+| test            | 仅测试路径，不会有文件上传                                  | boolean | false         |
+| enabled         | 是否启用本插件                                            | boolean | true          |
 | ...             | 其他初始化 oss 的参数，详细信息请见 https://www.alibabacloud.com/help/zh/doc-detail/64097.html | any | |
 

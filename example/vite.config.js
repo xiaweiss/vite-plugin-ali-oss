@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vitePluginAliOss from './plugin.js'
+import vitePluginAliOss from 'vite-plugin-ali-oss'
 
 const options = {
   region: 'oss-cn-beijing',
@@ -8,12 +8,13 @@ const options = {
   accessKeySecret: '',
   bucket: 'xiaweiss',
   overwrite: false,
+  // enabled: false,
   // test: true,
 }
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://foo.com/base', // same with webpack public path
+  base: 'https://foo.com/base/', // same with webpack public path
   plugins: [vue(), vitePluginAliOss(options)]
 })
 // result: dist/assets/vendor.bfb92b77.js => https://foo.com/base/assets/vendor.bfb92b77.js

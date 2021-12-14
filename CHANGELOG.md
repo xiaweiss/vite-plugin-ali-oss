@@ -1,5 +1,8 @@
 Change log
 =======
+v1.0.2
+fix: add param enabled, add nomorepo
+
 v1.0.1
 fix: change ESmodule to CommonJS
 

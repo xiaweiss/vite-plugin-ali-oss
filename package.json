@@ -12,6 +12,9 @@
 		"ali-oss",
 		"aliyun"
 	],
+	"scripts": {
+		"example:build": "pnpm -C example build"
+	},
 	"dependencies": {
 		"ali-oss": "^6.16.0",
 		"colors": "^1.4.0",
