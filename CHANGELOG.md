@@ -1,5 +1,8 @@
 Change log
 =======
+v1.0.3
+fix: lock colors package version
+
 v1.0.2
 fix: add param enabled, add nomorepo
 
