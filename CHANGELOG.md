@@ -1,5 +1,8 @@
 Change log
 =======
+v1.0.4
+upgrade: ali-oss 6.17.1
+
 v1.0.3
 fix: lock colors package version
 
