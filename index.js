@@ -2,7 +2,7 @@ const colors  = require('colors')
 const glob  = require('glob')
 const path = require('path')
 const OSS = require('ali-oss')
-const {URL} = require( 'url')
+const {URL} = require('url')
 
 const { normalizePath } = require('vite')
 
@@ -23,7 +23,8 @@ module.exports = function vitePluginAliOss (options) {
       buildConfig = config.build
     },
     async closeBundle () {
-      const outDirPath = path.resolve(normalizePath(buildConfig.outDir))
+      const outDirPath = normalizePath(path.resolve(normalizePath(buildConfig.outDir)))
+
       const {pathname: ossBasePath, origin: ossOrigin} = new URL(baseConfig)
 
       const createOssOption = Object.assign({}, options)
@@ -35,7 +36,15 @@ module.exports = function vitePluginAliOss (options) {
 
       const client = new OSS(createOssOption)
 
-      const files = await glob.sync(outDirPath + '/**/*', {nodir: true, dot: true, ignore: options.ignore ? options.ignore : '**/*.html'})
+      const files = await glob.sync(
+        outDirPath + '/**/*',
+        {
+          strict: true,
+          nodir: true,
+          dot: true,
+          ignore: options.ignore ? options.ignore : '**/*.html'
+        }
+      )
 
       console.log('')
       console.log('ali oss upload start')
