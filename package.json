@@ -17,7 +17,7 @@
 	},
 	"dependencies": {
 		"ali-oss": "^6.17.1",
-		"colors": "1.4.0",
+		"chalk": "^4.1.2",
 		"glob": "^8.0.3"
 	},
 	"peerDependencies": {
@@ -27,6 +27,6 @@
 		"@xiaweiss:registry": "https://npm.pkg.github.com"
 	},
 	"engines": {
-    "node": ">=12.0.0"
-  }
+		"node": ">=12.0.0"
+	}
 }

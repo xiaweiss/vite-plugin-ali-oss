@@ -1,4 +1,4 @@
-const colors  = require('colors')
+const chalk = require('chalk')
 const glob  = require('glob')
 const path = require('path')
 const OSS = require('ali-oss')
@@ -59,7 +59,7 @@ module.exports = function vitePluginAliOss (options) {
 
         const completePath = ossOrigin + ossFilePath // eg: 'https://foo.com/base/assets/vendor.bfb92b77.js'
 
-        const output = `${buildConfig.outDir + filePath} => ${colors.green(completePath)}`
+        const output = `${buildConfig.outDir + filePath} => ${chalk.green(completePath)}`
 
         if (options.test) {
           console.log(`test upload path: ${output}`)
@@ -79,7 +79,7 @@ module.exports = function vitePluginAliOss (options) {
         } else {
           try {
             await client.head(ossFilePath);
-            console.log(`${colors.grey('files exists')}: ${output}`)
+            console.log(`${chalk.grey('files exists')}: ${output}`)
 
           }  catch (error) {
             if (error.code === 'NoSuchKey') {
