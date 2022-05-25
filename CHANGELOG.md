@@ -1,5 +1,9 @@
 Change log
 =======
+v1.0.5
+fix: windows path
+change color lib, replace `colors` with `chalk`
+
 v1.0.4
 upgrade: ali-oss 6.17.1
 
