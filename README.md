@@ -1,5 +1,8 @@
 vite-plugin-ali-oss
 =======
+![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
+![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
+
 
 Upload the production files bundled in the project to Ali OSS, except for html
 
