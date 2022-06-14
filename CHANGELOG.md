@@ -2,6 +2,7 @@ Change log
 =======
 v1.0.6
 update README.md
+change color lib, replace `chalk` with `picocolors`
 
 v1.0.5
 fix: windows path
