@@ -3,18 +3,18 @@ vite-plugin-ali-oss
 ![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
 
-
 Upload the production files bundled in the project to Ali OSS, except for html
 
 [中文文档](https://github.com/xiaweiss/vite-plugin-ali-oss/blob/master/README_CN.md)
 
 # Feature
 
-- Skip existing files by default (files will not be downloaded) to speed up upload.
-- Almost zero configuration, using vite outDir path, uploading to the same path of oss.
-> Upload all files except html files, because html files has no hash and is usually placed on the server.
+- Skip existing files by default (files will not be downloaded) to speed up upload files.
+- Almost zero configuration, using `outDir` path of `vite`, uploading to the same path of oss.
 
-preview:
+Note: Upload all files except html files, because html files have no hash and are usually placed on the server.
+
+# Preview:
 
 ![preview](https://raw.githubusercontent.com/xiaweiss/vite-plugin-ali-oss/master/example/preview.png)
 
@@ -66,7 +66,7 @@ export default defineConfig({
 pnpm run build
 ```
 
-The plugin will upload files of outDir path after bundle.
+The plugin will upload files of `outDir` path after bundle.
 
 # options
 

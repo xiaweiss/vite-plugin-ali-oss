@@ -1,5 +1,8 @@
 Change log
 =======
+v1.0.6
+update README.md
+
 v1.0.5
 fix: windows path
 change color lib, replace `colors` with `chalk`

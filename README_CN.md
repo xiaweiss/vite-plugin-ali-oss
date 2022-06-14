@@ -1,13 +1,16 @@
 vite-plugin-ali-oss
 =======
+![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
+![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
 
 将项目中打包后生产文件上传到 Ali OSS，除了 html 以外
 
 # 功能特性
 
 - 默认跳过已存在的文件（不会下载文件），加快上传速度
-- 几乎零配置，使用 vite outDir 路径，上传到 oss 的相同路径中
-> 除了所有 html 文件以外，上传所有文件。因为 html 文件没有哈希值，且通常放在服务器上
+- 几乎零配置，使用 `vite` `outDir` 路径，上传到 oss 的相同路径中
+
+备注：除了所有 html 文件以外，上传所有文件。因为 html 文件没有哈希值，且通常放在服务器上
 
 效果预览：
 

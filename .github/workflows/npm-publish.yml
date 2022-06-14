@@ -18,6 +18,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i pnpm@latest -g
       - run: pnpm install
-      - run: pnpm publish --no-git-checks
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
