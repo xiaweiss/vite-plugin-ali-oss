@@ -1,6 +1,6 @@
 {
 	"name": "vite-plugin-ali-oss",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"author": "xiaweiss",
 	"description": "Upload the production files bundled in the project to Ali OSS, except for html",
 	"homepage": "https://github.com/xiaweiss/vite-plugin-ali-oss",
@@ -13,10 +13,12 @@
 		"aliyun"
 	],
 	"scripts": {
-		"example:build": "pnpm -C example build"
+		"example:build": "pnpm -C example build",
+		"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
 	},
 	"dependencies": {
 		"ali-oss": "^6.17.1",
+		"conventional-changelog-cli": "^2.2.2",
 		"glob": "^8.0.3",
 		"picocolors": "^1.0.0"
 	},

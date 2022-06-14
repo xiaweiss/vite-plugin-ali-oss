@@ -1,17 +1,20 @@
 Change log
 =======
 v1.0.6
-update README.md
-change color lib, replace `chalk` with `picocolors`
+- update README.md
+- change color lib, replace `chalk` with `picocolors`
 
 v1.0.5
-fix: windows path
-change color lib, replace `colors` with `chalk`
+
+- fix: windows path
+- change color lib, replace `colors` with `chalk`
 
 v1.0.4
+
 upgrade: ali-oss 6.17.1
 
 v1.0.3
+
 fix: lock colors package version
 
 v1.0.2
