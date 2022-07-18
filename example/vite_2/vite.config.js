@@ -4,10 +4,10 @@ import vitePluginAliOss from 'vite-plugin-ali-oss'
 
 const options = {
   region: 'oss-cn-beijing',
-  accessKeyId: 'LTAI5tRBfMc7ZpgGvDFUz7rr',
-  accessKeySecret: '',
+  accessKeyId: 'LTAI5tAeqpA9qfreo3aTttvt',
+  accessKeySecret: '', // Note: Add your accessKeySecret
   bucket: 'xiaweiss',
-  overwrite: false,
+  overwrite: true,
   // enabled: false,
   // test: true,
 }
