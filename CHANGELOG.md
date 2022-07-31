@@ -1,5 +1,9 @@
 Change log
 =======
+v1.0.7
+- feat: add vite 3 demo
+- fix: peerDependencies version
+
 v1.0.6
 - update README.md
 - change color lib, replace `chalk` with `picocolors`

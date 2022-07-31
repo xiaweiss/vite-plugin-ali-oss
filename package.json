@@ -23,7 +23,7 @@
 		"picocolors": "^1.0.0"
 	},
 	"peerDependencies": {
-		"vite": "^2"
+		"vite": "*"
 	},
 	"publishConfig": {
 		"@xiaweiss:registry": "https://npm.pkg.github.com"
