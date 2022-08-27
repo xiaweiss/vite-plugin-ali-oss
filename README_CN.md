@@ -51,11 +51,19 @@ const options = {
   bucket: '<Your Bucket>'
 }
 
+const prod = process.env.NODE_ENV === 'production'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://foo.com/', // 必须是 URL
+  base: prod ? 'https://foo.com/' : '/', // 打包时必须是 URL
   plugins: [vue(), vitePluginAliOss(options)]
 })
+```
+
+上传到 oss 特定目录下，只要直接设置 base：
+
+```javascript
+base: prod ? 'https://foo.com/yourpath/etc/' : '/'
 ```
 
 3. 打包发布生产代码
