@@ -1,4 +1,11 @@
-g## <small>1.0.7 (2022-07-31)</small>
+## <small>1.0.8 (2022-08-27)</small>
+
+* feat: support vite ssr mode ([d63198f](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/d63198f))
+* chore: update README, CHANGELOG ([ad65d70](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/ad65d70))
+
+
+
+## <small>1.0.7 (2022-07-31)</small>
 
 * feat: add vite 3 demo ([f58b73f](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/f58b73f))
 * fix: peerDependencies version ([7d73126](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/7d73126))
