@@ -1,20 +1,25 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vitePluginAliOss from 'vite-plugin-ali-oss'
+import * as dotenv from 'dotenv'
+import path from 'path'
+dotenv.config({path: path.resolve(process.cwd(), '.env.local')})
 
 const options = {
   region: 'oss-cn-beijing',
-  accessKeyId: 'LTAI5tAeqpA9qfreo3aTttvt',
-  accessKeySecret: '', // Note: Add your accessKeySecret
+  accessKeyId: process.env.VITE_ACCESS_KEY_ID, //  Note: Add your accessKeyId
+  accessKeySecret: process.env.VITE_ACCESS_KEY_SECRET, // Note: Add your accessKeySecret
   bucket: 'xiaweiss',
   overwrite: true,
   // enabled: false,
   // test: true,
 }
 
+const prod = process.env.NODE_ENV === 'production'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://foo.com/base/', // same with webpack public path
+  base: prod ? 'https://foo.com/base/' : '/', // same with webpack public path
   plugins: [vue(), vitePluginAliOss(options)]
 })
 // result: dist/assets/vendor.bfb92b77.js => https://foo.com/base/assets/vendor.bfb92b77.js
