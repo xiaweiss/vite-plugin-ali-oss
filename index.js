@@ -23,6 +23,10 @@ module.exports = function vitePluginAliOss (options) {
       buildConfig = config.build
     },
     async closeBundle () {
+      if (!/^http/i.test(baseConfig)) {
+        throw Error('[vite-plugin-ali-oss] base must be a url')
+      }
+
       const outDirPath = normalizePath(path.resolve(normalizePath(buildConfig.outDir)))
 
       const {pathname: ossBasePath, origin: ossOrigin} = new URL(baseConfig)
@@ -35,6 +39,8 @@ module.exports = function vitePluginAliOss (options) {
       delete createOssOption.enabled
 
       const client = new OSS(createOssOption)
+      const ssrClient = buildConfig.ssrManifest
+      const ssrServer = buildConfig.ssr
 
       const files = await glob.sync(
         outDirPath + '/**/*',
@@ -42,12 +48,21 @@ module.exports = function vitePluginAliOss (options) {
           strict: true,
           nodir: true,
           dot: true,
-          ignore: options.ignore ? options.ignore : '**/*.html'
+          ignore:
+            // custom ignore
+            options.ignore ? options.ignore :
+            // ssr client ignore
+            ssrClient ? ['**/ssr-manifest.json', '**/*.html'] :
+            // ssr server ignore
+            ssrServer ? ['**'] :
+            // default ignore
+            '**/*.html'
         }
       )
 
+
       console.log('')
-      console.log('ali oss upload start')
+      console.log('ali oss upload start' + (ssrClient ? ' (ssr client)' : ssrServer ? ' (ssr server)' : ''))
       console.log('')
 
       const startTime = new Date().getTime()

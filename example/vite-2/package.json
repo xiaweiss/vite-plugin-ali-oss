@@ -8,11 +8,12 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.36"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.9",
+    "@vitejs/plugin-vue": "^2.3.4",
+    "dotenv": "^16.0.1",
+    "vite": "^2.9.15",
     "vite-plugin-ali-oss": "workspace:*"
   }
 }
