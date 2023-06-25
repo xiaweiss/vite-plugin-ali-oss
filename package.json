@@ -18,9 +18,11 @@
 	},
 	"dependencies": {
 		"ali-oss": "^6.17.1",
-		"conventional-changelog-cli": "^2.2.2",
 		"glob": "^8.0.3",
 		"picocolors": "^1.0.0"
+	},
+	"devDependencies": {
+		"conventional-changelog-cli": "^2.2.2"
 	},
 	"peerDependencies": {
 		"vite": "*"
