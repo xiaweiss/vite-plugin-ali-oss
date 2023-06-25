@@ -1,3 +1,9 @@
+## <small>1.0.9 (2023-06-25)</small>
+
+* fix: update package.json, "conventional-changelog-cli" move to devDependencies ([e51b09a](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/e51b09a))
+
+
+
 ## <small>1.0.8 (2022-08-27)</small>
 
 * feat: support vite ssr mode ([d63198f](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/d63198f))
