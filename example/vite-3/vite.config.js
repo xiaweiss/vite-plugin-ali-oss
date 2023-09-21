@@ -11,7 +11,7 @@ const options = {
   accessKeyId: process.env.VITE_ACCESS_KEY_ID, //  Note: Add your accessKeyId
   accessKeySecret: process.env.VITE_ACCESS_KEY_SECRET, // Note: Add your accessKeySecret
   bucket: 'xiaweiss',
-  overwrite: false,
+  // overwrite: false,
   // enabled: false,
   // test: true,
 }
@@ -20,7 +20,7 @@ const prod = process.env.NODE_ENV === 'production'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/', // same with webpack public path
+  base: prod ? 'https://foo.com/base/' : '/', // same with webpack public path
   plugins: [vue(), vitePluginAliOss(options)]
 })
 // result: dist/assets/vendor.bfb92b77.js => https://foo.com/base/assets/vendor.bfb92b77.js
