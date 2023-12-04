@@ -1,3 +1,9 @@
+## <small>1.0.10 (2023-12-04)</small>
+
+* fix: ignore option not working when empty string ([75cd559](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/75cd559))
+
+
+
 ## <small>1.0.9 (2023-06-25)</small>
 
 * fix: update package.json, "conventional-changelog-cli" move to devDependencies ([e51b09a](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/e51b09a))
