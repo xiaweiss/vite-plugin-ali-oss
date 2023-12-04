@@ -50,7 +50,7 @@ module.exports = function vitePluginAliOss (options) {
           dot: true,
           ignore:
             // custom ignore
-            options.ignore ? options.ignore :
+            options.ignore !== undefined ? options.ignore :
             // ssr client ignore
             ssrClient ? ['**/ssr-manifest.json', '**/*.html'] :
             // ssr server ignore
