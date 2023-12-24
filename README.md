@@ -2,6 +2,8 @@ vite-plugin-ali-oss
 =======
 ![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
+![stars](https://img.shields.io/github/stars/xiaweiss/vite-plugin-ali-oss)
+![npm](https://img.shields.io/npm/v/vite-plugin-ali-oss)
 
 Upload the production files bundled in the project to Ali OSS, except for html
 
@@ -20,20 +22,16 @@ Note: Upload all files except html files, because html files have no hash and ar
 
 # Installation
 
-```
-pnpm i -D vite-plugin-ali-oss
-```
-
-or
-
-```bash
-yarn add -D vite-plugin-ali-oss
-```
-
-or
+ESM version for vite 5:
 
 ```bash
 npm i -D vite-plugin-ali-oss
+```
+
+other version:
+
+```bash
+npm i -D vite-plugin-ali-oss@^1.0.0
 ```
 
 # Basic usage

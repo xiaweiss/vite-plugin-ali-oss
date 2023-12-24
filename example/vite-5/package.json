@@ -9,12 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.9"
+    "vue": "^3.3.13"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.1",
+    "@vitejs/plugin-vue": "^4.5.2",
     "dotenv": "^16.3.1",
-    "vite": "5.0.4",
+    "vite": "^5.0.10",
     "vite-plugin-ali-oss": "workspace:*"
   }
 }

@@ -1,6 +1,7 @@
 {
 	"name": "vite-plugin-ali-oss",
-	"version": "1.0.10",
+	"version": "2.0.0-beta",
+	"type": "module",
 	"author": "xiaweiss",
 	"description": "Upload the production files bundled in the project to Ali OSS, except for html",
 	"homepage": "https://github.com/xiaweiss/vite-plugin-ali-oss",
@@ -17,20 +18,20 @@
 		"changelog": "conventional-changelog -i CHANGELOG.md -s"
 	},
 	"dependencies": {
-		"ali-oss": "^6.17.1",
-		"glob": "^8.0.3",
+		"ali-oss": "^6.19.0",
+		"glob": "^10.3.10",
 		"picocolors": "^1.0.0"
 	},
 	"devDependencies": {
-		"conventional-changelog-cli": "^2.2.2"
+		"conventional-changelog-cli": "2.2.2"
 	},
 	"peerDependencies": {
-		"vite": "*"
+		"vite": "^5.0.0"
 	},
 	"publishConfig": {
 		"@xiaweiss:registry": "https://npm.pkg.github.com"
 	},
 	"engines": {
-		"node": ">=12.0.0"
+		"node": ">=18.0.0"
 	}
 }

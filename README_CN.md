@@ -2,6 +2,8 @@ vite-plugin-ali-oss
 =======
 ![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
+![stars](https://img.shields.io/github/stars/xiaweiss/vite-plugin-ali-oss)
+![npm](https://img.shields.io/npm/v/vite-plugin-ali-oss)
 
 将项目中打包后生产文件上传到 Ali OSS，除了 html 以外
 
@@ -18,21 +20,16 @@ vite-plugin-ali-oss
 
 # 安装
 
-```
-pnpm i -D vite-plugin-ali-oss
-```
-
-或者
-
-```bash
-yarn add -D vite-plugin-ali-oss
-```
-
-或者
+适用 vite 5 的 ESM 版本：
 
 ```bash
 npm i -D vite-plugin-ali-oss
 ```
+
+其它情况请安装 v1 版本：
+
+```bash
+npm i -D vite-plugin-ali-oss@^1.0.0
 
 # 基本使用
 
