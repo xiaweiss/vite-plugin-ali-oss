@@ -1,3 +1,10 @@
+## 2.0.0 (2023-12-25)
+
+* feat: Configure ESM as default，Deprecate CJS and node 16 ([0aab8f4](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/0aab8f4))
+* feat: support typescript ([d9d9f91](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/d9d9f91))
+
+
+
 ## <small>1.0.10 (2023-12-04)</small>
 
 * fix: ignore option not working when empty string ([75cd559](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/75cd559))
