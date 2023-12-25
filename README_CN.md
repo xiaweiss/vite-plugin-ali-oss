@@ -23,7 +23,7 @@ vite-plugin-ali-oss
 适用 vite 5 的 ESM 版本：
 
 ```bash
-npm i -D vite-plugin-ali-oss
+npm i -D vite-plugin-ali-oss@latest
 ```
 
 其它情况请安装 v1 版本：

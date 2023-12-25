@@ -8,7 +8,7 @@ import { normalizePath } from 'vite'
 
 export default function vitePluginAliOss (options) {
   let baseConfig = '/'
-  let buildConfig = ''
+  let buildConfig = {}
 
   if (options.enabled !== void 0 && !options.enabled) {
     return
@@ -49,7 +49,6 @@ export default function vitePluginAliOss (options) {
         const files = globSync(
           outDirPath + '/**/*',
           {
-            strict: true,
             nodir: true,
             dot: true,
             ignore:

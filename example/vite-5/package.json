@@ -1,20 +1,23 @@
 {
-  "name": "vite-project",
+  "name": "vite-5-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.13"
+    "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@types/node": "^20.10.5",
     "@vitejs/plugin-vue": "^4.5.2",
     "dotenv": "^16.3.1",
-    "vite": "^5.0.10",
-    "vite-plugin-ali-oss": "workspace:*"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-ali-oss": "workspace:*",
+    "vue-tsc": "^1.8.25"
   }
 }

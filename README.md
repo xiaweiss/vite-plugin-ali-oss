@@ -25,7 +25,7 @@ Note: Upload all files except html files, because html files have no hash and ar
 ESM version for vite 5:
 
 ```bash
-npm i -D vite-plugin-ali-oss
+npm i -D vite-plugin-ali-oss@latest
 ```
 
 other version:
