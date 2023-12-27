@@ -71,7 +71,7 @@ export default function vitePluginAliOss (options) {
         const startTime = new Date().getTime()
 
         for (const fileFullPath of files) {
-          const filePath = fileFullPath.split(outDirPath)[1] // eg: '/assets/vendor.bfb92b77.js'
+          const filePath = normalizePath(fileFullPath).split(outDirPath)[1] // eg: '/assets/vendor.bfb92b77.js'
 
           const ossFilePath = ossBasePath.replace(/\/$/, '') + filePath // eg: '/base/assets/vendor.bfb92b77.js'
 
