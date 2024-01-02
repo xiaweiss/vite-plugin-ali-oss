@@ -2,8 +2,8 @@ vite-plugin-ali-oss
 =======
 ![license](https://img.shields.io/npm/l/vite-plugin-ali-oss)
 ![downloads](https://img.shields.io/npm/dt/vite-plugin-ali-oss)
-![stars](https://img.shields.io/github/stars/xiaweiss/vite-plugin-ali-oss)
 ![npm](https://img.shields.io/npm/v/vite-plugin-ali-oss)
+![stars](https://img.shields.io/github/stars/xiaweiss/vite-plugin-ali-oss)
 
 将项目中打包后生产文件上传到 Ali OSS，除了 html 以外
 

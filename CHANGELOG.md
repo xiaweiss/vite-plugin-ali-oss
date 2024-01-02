@@ -1,3 +1,7 @@
+## <small>2.0.1 (2024-01-02)</small>
+
+* fix: normalize path ([debd77d](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/debd77d)), closes ([#14](https://github.com/xiaweiss/vite-plugin-ali-oss/issues/14))
+
 ## 2.0.0 (2023-12-25)
 
 * feat: Configure ESM as default，Deprecate CJS and node 16 ([0aab8f4](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/0aab8f4))
