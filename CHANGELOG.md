@@ -1,6 +1,12 @@
+## <small>2.0.2 (2024-02-20)</small>
+
+* chore: update package ali-oss ([b198de6](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/b198de6))
+
+
 ## <small>2.0.1 (2024-01-02)</small>
 
 * fix: normalize path ([debd77d](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/debd77d)), closes ([#14](https://github.com/xiaweiss/vite-plugin-ali-oss/issues/14))
+
 
 ## 2.0.0 (2023-12-25)
 
