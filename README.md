@@ -22,7 +22,7 @@ Note: Upload all files except html files, because html files have no hash and ar
 
 # Installation
 
-ESM version for vite 5:
+ESM version for vite 5、vite 6:
 
 ```bash
 npm i -D vite-plugin-ali-oss@latest
