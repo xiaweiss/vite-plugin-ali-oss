@@ -1,5 +1,5 @@
 import color from 'picocolors'
-import { globSync } from 'glob'
+import { globSync } from 'tinyglobby'
 import path from 'path'
 import OSS from 'ali-oss'
 import { URL } from 'node:url'
@@ -49,7 +49,7 @@ export default function vitePluginAliOss (options) {
         const files = globSync(
           outDirPath + '/**/*',
           {
-            nodir: true,
+            absolute: true,
             dot: true,
             ignore:
               // custom ignore

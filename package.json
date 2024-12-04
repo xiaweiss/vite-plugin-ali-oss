@@ -20,8 +20,8 @@
 	},
 	"dependencies": {
 		"ali-oss": "^6.20.0",
-		"glob": "^10.3.10",
-		"picocolors": "^1.0.0"
+		"picocolors": "^1.0.0",
+		"tinyglobby": "^0.2.10"
 	},
 	"devDependencies": {
 		"conventional-changelog-cli": "2.2.2"
