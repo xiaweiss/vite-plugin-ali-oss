@@ -1,10 +1,32 @@
 import color from 'picocolors'
-import { globSync } from 'glob'
+import { globSync } from 'tinyglobby'
 import path from 'path'
 import OSS from 'ali-oss'
 import { URL } from 'node:url'
 
 import { normalizePath } from 'vite'
+
+const retry = async (fn, time) => {
+  while (true) {
+    try {
+      await fn()
+      break
+    } catch (error) {
+
+      if (time > 0) {
+        time -= 1
+        console.error(color.red(error))
+        await new Promise(resolve => setTimeout(resolve, 500))
+        console.log('')
+        console.log('')
+        console.log(`[vite-plugin-ali-oss] retry upload after 0.5s, ${time} times left`)
+        console.log('')
+      } else {
+        throw new Error(error)
+      }
+    }
+  }
+}
 
 export default function vitePluginAliOss (options) {
   let baseConfig = '/'
@@ -41,6 +63,7 @@ export default function vitePluginAliOss (options) {
         delete createOssOption.headers
         delete createOssOption.test
         delete createOssOption.enabled
+        delete createOssOption.retry
 
         const client = new OSS(createOssOption)
         const ssrClient = buildConfig.ssrManifest
@@ -49,7 +72,7 @@ export default function vitePluginAliOss (options) {
         const files = globSync(
           outDirPath + '/**/*',
           {
-            nodir: true,
+            absolute: true,
             dot: true,
             ignore:
               // custom ignore
@@ -85,22 +108,24 @@ export default function vitePluginAliOss (options) {
           }
 
           if (options.overwrite) {
-            await client.put(
-              ossFilePath,
-              fileFullPath,
-              {
-                headers: options.headers || {}
-              }
-            )
-            console.log(`upload complete: ${output}`)
+            await retry(async () => {
+              await client.put(
+                ossFilePath,
+                fileFullPath,
+                {
+                  headers: options.headers || {}
+                }
+              )
+              console.log(`upload complete: ${output}`)
+            }, Number(options.retry || 0))
 
           } else {
             try {
               await client.head(ossFilePath);
               console.log(`${color.gray('files exists')}: ${output}`)
 
-            }  catch (error) {
-              if (error.code === 'NoSuchKey') {
+            } catch (error) {
+              await retry(async () => {
                 await client.put(
                   ossFilePath,
                   fileFullPath,
@@ -109,9 +134,7 @@ export default function vitePluginAliOss (options) {
                   }
                 )
                 console.log(`upload complete: ${output}`)
-              } else {
-                throw new Error(error)
-              }
+              }, Number(options.retry || 0))
             }
           }
         }
