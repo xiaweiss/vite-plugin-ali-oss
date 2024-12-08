@@ -15,6 +15,7 @@ const options = {
   // overwrite: false,
   // enabled: false,
   // test: true,
+  // retry: 3
 }
 
 const prod = process.env.NODE_ENV === 'production'

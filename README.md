@@ -86,5 +86,6 @@ The plugin will upload files of `outDir` path after bundle.
 | headers         | Request headers setting, more information: https://www.alibabacloud.com/help/en/doc-detail/31978.html | object | {} |
 | test            | Only test path, no files upload                                           | boolean | false         |
 | enabled         | Enable the ali oss plugin                                                 | boolean | true          |
+| retry           | Number of retries when upload fails                                       | number  | 0             |
 | ...             | Other init oss options, more information: https://www.alibabacloud.com/help/en/doc-detail/64097.html | any | |
 

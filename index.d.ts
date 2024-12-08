@@ -19,6 +19,8 @@ interface Options {
   test?: boolean
   /** Enable the ali oss plugin. Default true */
   enabled?: boolean
+  /** Number of retries when upload (default 0) */
+  retry?: number
   /** The temporary Security Token Service (STS) token used to access OSS. */
   stsToken?: string
   /** The endpoint that is used to access your OSS bucket. */
