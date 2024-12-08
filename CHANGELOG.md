@@ -1,3 +1,11 @@
+## 2.1.0 (2024-12-08)
+
+* feat: add retry option ([69ae091](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/69ae091))
+* chore: migrate glob to tinyglobby ([fb90417](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/fb90417))
+* chore: update dependencies, ali-oss 6.22.0 ([f50b48e](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/f50b48e))
+* test: add vite-6 example ([6096839](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/6096839))
+* ci: update node version ([23b640f](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/23b640f))
+
 ## <small>2.0.2 (2024-02-20)</small>
 
 * chore: update package ali-oss ([b198de6](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/b198de6))
