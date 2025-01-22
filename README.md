@@ -87,5 +87,6 @@ The plugin will upload files of `outDir` path after bundle.
 | test            | Only test path, no files upload                                           | boolean | false         |
 | enabled         | Enable the ali oss plugin                                                 | boolean | true          |
 | retry           | Number of retries when upload fails                                       | number  | 0             |
+| concurrency     | Adjust upload concurrency based on the build machine’s upstream bandwidth, as insufficient bandwidth may cause timeouts and failures. | number  | 20 |
 | ...             | Other init oss options, more information: https://www.alibabacloud.com/help/en/doc-detail/64097.html | any | |
 
