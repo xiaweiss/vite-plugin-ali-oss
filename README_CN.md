@@ -85,5 +85,6 @@ pnpm run build
 | test            | 仅测试路径，不会有文件上传                                  | boolean | false         |
 | enabled         | 是否启用本插件                                            | boolean | true          |
 | retry           | 上传失败时，重试次数                                       | number  | 0             |
+| concurrency     | 上传并发数，不建议过大，根据打包机器的上行带宽大小进行调整，上行带宽不够极易导致超时失败 | number  | 20 |
 | ...             | 其他初始化 oss 的参数，详细信息请见 https://www.alibabacloud.com/help/zh/doc-detail/64097.html | any | |
 

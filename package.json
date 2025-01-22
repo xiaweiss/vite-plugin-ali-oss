@@ -20,6 +20,7 @@
 	},
 	"dependencies": {
 		"ali-oss": "^6.22.0",
+		"p-queue": "^8.0.1",
 		"picocolors": "^1.1.1",
 		"tinyglobby": "^0.2.10"
 	},
