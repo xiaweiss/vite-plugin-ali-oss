@@ -1,3 +1,9 @@
+## <small>2.1.1 (2025-09-03)</small>
+
+* chore: update package ali-oss ([11b73ea](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/11b73ea))
+
+
+
 ## 2.1.0 (2024-12-08)
 
 * feat: add retry option ([69ae091](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/69ae091))
@@ -6,9 +12,12 @@
 * test: add vite-6 example ([6096839](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/6096839))
 * ci: update node version ([23b640f](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/23b640f))
 
+
+
 ## <small>2.0.2 (2024-02-20)</small>
 
 * chore: update package ali-oss ([b198de6](https://github.com/xiaweiss/vite-plugin-ali-oss/commit/b198de6))
+
 
 
 ## <small>2.0.1 (2024-01-02)</small>
