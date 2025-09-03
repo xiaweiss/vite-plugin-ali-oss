@@ -19,15 +19,15 @@
 		"changelog": "conventional-changelog -i CHANGELOG.md -s"
 	},
 	"dependencies": {
-		"ali-oss": "^6.22.0",
+		"ali-oss": "^6.23.0",
 		"picocolors": "^1.1.1",
-		"tinyglobby": "^0.2.10"
+		"tinyglobby": "^0.2.14"
 	},
 	"devDependencies": {
 		"conventional-changelog-cli": "5.0.0"
 	},
 	"peerDependencies": {
-		"vite": "^6.0.2"
+		"vite": "^6.0.0 || ^7.0.0"
 	},
 	"publishConfig": {
 		"@xiaweiss:registry": "https://npm.pkg.github.com"
